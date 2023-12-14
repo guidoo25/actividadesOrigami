@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit this template
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<h:head>
+    <title>Areas, Personas y Procesos</title>
+</h:head>
+<h:body>
+    <h:form>
+        <h2>Areas</h2>
+        <h:dataTable value="#{areaMB.areas}" var="areas">
+            <h:column>
+                <f:facet name="header">Descripcion</f:facet>
+                <h:outputLabel value="#{areas.descripcion}"/>
+            </h:column>
+        </h:dataTable>
+
+        <h2>Personas</h2>
+        <h:dataTable value="#{personaMB.personas}" var="persona">
+            <h:column>
+                <f:facet name="header">Identificacion</f:facet>
+                <h:outputText value="#{persona.identificacion}" />
+            </h:column>
+            <h:column>
+                <f:facet name="header">Nombre</f:facet>
+                <h:outputText value="#{persona.nombre}" />
+            </h:column>
+            <h:column>
+                <f:facet name="header">Apellido</f:facet>
+                <h:outputText value="#{persona.apellido}" />
+            </h:column>
+        </h:dataTable>
+
+        <h2>Procesos</h2>
+        <h:dataTable value="#{procesoMB.procesos}" var="proceso">
+            <h:column>
+                <f:facet name="header">Descripcion</f:facet>
+                <h:outputText value="#{proceso.descripcion}" />
+            </h:column>
+        </h:dataTable>
+    </h:form>
+</h:body>
+</html>
