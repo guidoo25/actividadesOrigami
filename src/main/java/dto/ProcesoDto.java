@@ -2,25 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package org.proyecto.entity;
-import javax.persistence.*;
-
+package dto;
 
 /**
  *
  * @author guido
  */
+public class ProcesoDto {
 
-@Entity
-@Table(name = "area")
-public class Area {
-
-    @Id
-    @Column
     private Integer id;
     private String descripcion;
 
-    public Area() {
+    public ProcesoDto() {
     }
 
     public Integer getId() {
